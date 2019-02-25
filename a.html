@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Open+Sans+Condensed:300" rel="stylesheet">
+<style>
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0 auto;
+  max-width: 700px;
+  background: #2623;
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Libre Barcode 128 Text', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #babde;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #abc;
+  margin: 0px 0 70px 0;
+}
+
+p {
+  color: rgba(255,255,2,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,250,1), rgba(0,4,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+    ul {
+      padding: 10px;
+      background: rgba(1000,0,100,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<ul>
+<li><button onclick="Entrees()">Entress</button></li>
+      <li><button onclick="Beverages()">Beverages</button></li>
+      <li><button onclick="Desserts()">Desserts</button></li>
+    </ul>
+
+<h1>esha's restaurant</h1>
+<h2>a New York City eatery</h2>
+
+<div id="food"> </div>
+<script>
+
+EntreesImages = [
+    'url("https://www.northeastohioboomer.com/wp-content/uploads/2018/03/restaurant-food-01.jpg")',
+    'url("http://www.santerestaurant.com/wp-content/uploads/2017/07/10405138_l.jpg")',
+    'url("https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0060/img33l.jpg")',
+  ]
+BeveragesImages = [
+				'url("https://static1.squarespace.com/static/518ea9e4e4b0eb1ecff22776/t/5a37244d71c10b467b399288/1513563226351/shutterstock_398837842.jpg")',
+				'url("http://www.printpack.com/wp-content/uploads/2014/08/top-beverage2.jpg")',
+				'url("https://static1.squarespace.com/static/569507d7b204d52491fda8ff/59b609d2f14aa14c97c19b6d/5a72c0a7c8302573ec30c0d1/1517469865921/SBP-Port-Beverage-03.jpg?format=1000w")',
+	]
+DessertsImages = [
+				'url("http://dash.ga.co/assets/dessertcourse.jpg")',
+				'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsEJAmS9y8tsI76CG-U7CrthT16W7sN3pAbeBlCWR8B9D-QIYT")',
+				'url("https://bakeatmidnite.com/wp-content/uploads/2014/08/white-chocolate-heath-bar-crunch-dessert-43-o.jpg")',
+		]
+
+EntreesDivs = [
+  '<div class="item"><p>steak and beans w/ tomato and asparagus(side)<span class="price">$17</span><br /><small> Big steak with tomato and asparagus *well done *medium rare *rare</small></p></div>',
+  '<div class="item"><p>spaghetti annd meatballs w/ tomato sauce<span class="price">$20</span><br /><small>Spaghetti Squash and Matballs, topped with a special tomato sauce.</small></p></div>',
+  '<div class="item"><p>soup<span class="price">$15</span><br /><small>ramen noodle soup w/ egg & any meat of your choice</small></p></div>',
+	]
+	
+BeveragesDivs = [
+  '<div class="item"><p>Variation of cool mist drinks w/ fruits(side)<span class="price">$15</span><br /><small> Cool mist drinks are refreshers that give you a booster to get moving.</small></p></div>',
+  '<div class="item"><p>Nutrient Smoothies<span class="price">$10</span><br /><small>Smoothies to get you day started with a tasty treat.</small></p></div>',
+  '<div class="item"><p>Wine<span class="price">$30</span><br /><small>Any wine of your choice. You name it, and we got it!</small></p></div>',
+	]
+	DessertsDivs = [
+  '<div class="item"><p>Chocolate Cake<span class="price">$15</span><br /><small> Mmm, got room for one more?</small></p></div>',
+  '<div class="item"><p>Smore Boat<span class="price">$10</span><br /><small>Bring back memories with campfires favorite treat.</small></p></div>',
+  '<div class="item"><p>Ice cream Cake<span class="price">$18</span><br /><small>A chilly treat to cool your mind. Brr!></p></div>',
+	]
+function Entrees() {
+    Entree = document.getElementById("food")
+    Entree.innerHTML = ''
+    Entree.innerHTML +=EntreesDivs[0]
+    Entree.innerHTML +=EntreesDivs[1]
+    Entree.innerHTML +=EntreesDivs[2]
+    items = document.getElementsByClassName("item")
+    items[0].style.background = EntreesImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = EntreesImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = EntreesImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+
+	//alert("https://www.lifehack.org/articles/lifestyle/42-practical-ways-to-improve-yourself.html")
+	
+} 
+function Beverages() {
+    Beverage = document.getElementById("food")
+    Beverage.innerHTML = ''
+    Beverage.innerHTML +=BeveragesDivs[0]
+    Beverage.innerHTML +=BeveragesDivs[1]
+    Beverage.innerHTML +=BeveragesDivs[2]
+    items = document.getElementsByClassName("item")
+    items[0].style.background = BeveragesImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = BeveragesImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = BeveragesImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+
+	//alert("https://everydaypowerblog.com/famous-poems/")
+} 
+function Desserts() {
+    Dessert = document.getElementById("food")
+    Dessert.innerHTML = ''
+    Dessert.innerHTML +=DessertsDivs[0]
+    Dessert.innerHTML +=DessertsDivs[1]
+    Dessert.innerHTML +=DessertsDivs[2]
+    items = document.getElementsByClassName("item")
+    items[0].style.background = DessertsImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = DessertsImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = DessertsImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+	
+	//alert("#")
+} 
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
