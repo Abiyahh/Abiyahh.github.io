@@ -129,9 +129,12 @@ DessertsImages = [
 		]
 
 EntreesDivs = [
-  '<div class="item"><p>steak and beans w/ tomato and asparagus(side)<span class="price">$17</span><br /><small> Big steak with tomato and asparagus *well done *medium rare *rare</small></p></div>',
-  '<div class="item"><p>spaghetti annd meatballs w/ tomato sauce<span class="price">$20</span><br /><small>Spaghetti Squash and Matballs, topped with a special tomato sauce.</small></p></div>',
-  '<div class="item"><p>soup<span class="price">$15</span><br /><small>ramen noodle soup w/ egg & any meat of your choice</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>steak and beans w/ tomato and asparagus(side)<span class="price">$17</span><br /><small> Big steak with tomato and asparagus *well done *medium rare *rare</small></p></div>',
+
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>spaghetti annd meatballs w/ tomato sauce<span class="price">$20</span><br /><small>Spaghetti Squash and Matballs, topped with a special tomato sauce.</small></p></div>',
+
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>soup<span class="price">$15</span><br /><small>ramen noodle soup w/ egg & any meat of your choice</small></p></div>',
+
 	]
 	
 BeveragesDivs = [
@@ -192,10 +195,7 @@ function Desserts() {
     items[2].style.backgroundSize = '100% 100%'
 	
 	//alert("#")
-} 
-  $('div').on('click', function() {
-      $(this).toggleClass('show-description');
-  });
+
 </script>
 
 </body>
