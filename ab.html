@@ -138,14 +138,14 @@ EntreesDivs = [
 	]
 	
 BeveragesDivs = [
-  '<div class="item"><p>Variation of cool mist drinks w/ fruits(side)<span class="price">$15</span><br /><small> Cool mist drinks are refreshers that give you a booster to get moving.</small></p></div>',
-  '<div class="item"><p>Nutrient Smoothies<span class="price">$10</span><br /><small>Smoothies to get you day started with a tasty treat.</small></p></div>',
-  '<div class="item"><p>Wine<span class="price">$30</span><br /><small>Any wine of your choice. You name it, and we got it!</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Variation of cool mist drinks w/ fruits(side)<span class="price">$15</span><br /><small> Cool mist drinks are refreshers that give you a booster to get moving.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Nutrient Smoothies<span class="price">$10</span><br /><small>Smoothies to get you day started with a tasty treat.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Wine<span class="price">$30</span><br /><small>Any wine of your choice. You name it, and we got it!</small></p></div>',
 	]
 	DessertsDivs = [
-  '<div class="item"><p>Chocolate Cake<span class="price">$15</span><br /><small> Mmm, got room for one more?</small></p></div>',
-  '<div class="item"><p>Smore Boat<span class="price">$10</span><br /><small>Bring back memories with campfires favorite treat.</small></p></div>',
-  '<div class="item"><p>Ice cream Cake<span class="price">$18</span><br /><small>A chilly treat to cool your mind. Brr!></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Chocolate Cake<span class="price">$15</span><br /><small> Mmm, got room for one more?</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Smore Boat<span class="price">$10</span><br /><small>Bring back memories with campfires favorite treat.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Ice cream Cake<span class="price">$18</span><br /><small>A chilly treat to cool your mind. Brr!></p></div>',
 	]
 function Entrees() {
     Entree = document.getElementById("food")
@@ -195,10 +195,6 @@ function Desserts() {
     items[2].style.backgroundSize = '100% 100%'
 	
 	//alert("#")
-} 
-  $('div').on('click', function() {
-      $(this).toggleClass('show-description');
-  });
 	
 </script>
 
