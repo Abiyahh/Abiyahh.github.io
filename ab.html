@@ -119,21 +119,22 @@ EntreesImages = [
     'url("https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0060/img33l.jpg")',
   ]
 BeveragesImages = [
-				'url("https://static1.squarespace.com/static/518ea9e4e4b0eb1ecff22776/t/5a37244d71c10b467b399288/1513563226351/shutterstock_398837842.jpg")',
-				'url("http://www.printpack.com/wp-content/uploads/2014/08/top-beverage2.jpg")',
-				'url("https://static1.squarespace.com/static/569507d7b204d52491fda8ff/59b609d2f14aa14c97c19b6d/5a72c0a7c8302573ec30c0d1/1517469865921/SBP-Port-Beverage-03.jpg?format=1000w")',
+    'url("https://static1.squarespace.com/static/518ea9e4e4b0eb1ecff22776/t/5a37244d71c10b467b399288/1513563226351/shutterstock_398837842.jpg")',
+    'url("http://www.printpack.com/wp-content/uploads/2014/08/top-beverage2.jpg")',
+    'url("https://static1.squarespace.com/static/569507d7b204d52491fda8ff/59b609d2f14aa14c97c19b6d/5a72c0a7c8302573ec30c0d1/1517469865921/SBP-Port-Beverage-03.jpg?format=1000w")',
 	]
 DessertsImages = [
-				'url("http://dash.ga.co/assets/dessertcourse.jpg")',
-				'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsEJAmS9y8tsI76CG-U7CrthT16W7sN3pAbeBlCWR8B9D-QIYT")',
-				'url("https://bakeatmidnite.com/wp-content/uploads/2014/08/white-chocolate-heath-bar-crunch-dessert-43-o.jpg")',
+     'url("http://dash.ga.co/assets/dessertcourse.jpg")',
+     'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsEJAmS9y8tsI76CG-U7CrthT16W7sN3pAbeBlCWR8B9D-QIYT")',
+     'url("https://bakeatmidnite.com/wp-content/uploads/2014/08/white-chocolate-heath-bar-crunch-dessert-43-o.jpg")',
+     'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUx5qDglBxOBFoGcpNLcNmZO3ahSQj3likPt9BD7xfXDtAYrbwLA"),
 		]
 
 EntreesDivs = [
   '<div class="item" onclick=this.classList.toggle("show-description")><p>steak and beans w/ tomato and asparagus(side)<span class="price">$17</span><br /><small> Big steak with tomato and asparagus *well done *medium rare *rare</small></p></div>',
 
   '<div class="item" onclick=this.classList.toggle("show-description")><p>spaghetti annd meatballs w/ tomato sauce<span class="price">$20</span><br /><small>Spaghetti Squash and Matballs, topped with a special tomato sauce.</small></p></div>',
-
+ 
   '<div class="item" onclick=this.classList.toggle("show-description")><p>soup<span class="price">$15</span><br /><small>ramen noodle soup w/ egg & any meat of your choice</small></p></div>',
 
 	]
@@ -143,10 +144,11 @@ BeveragesDivs = [
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Nutrient Smoothies<span class="price">$10</span><br /><small>Smoothies to get you day started with a tasty treat.</small></p></div>',
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Wine<span class="price">$30</span><br /><small>Any wine of your choice. You name it, and we got it!</small></p></div>',
 	]
-	DessertsDivs = [
+DessertsDivs = [
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Chocolate Cake<span class="price">$15</span><br /><small> Mmm, got room for one more?</small></p></div>',
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Smore Boat<span class="price">$10</span><br /><small>Bring back memories with campfires favorite treat.</small></p></div>',
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Ice cream Cake<span class="price">$18</span><br /><small>A chilly treat to cool your mind. Brr!></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p> Oreo Wonderland<span class="price">$14</span><br /><small>If you love Oreos like me, this is the treat for you!</small></p></div>',
 	]
 function Entrees() {
     Entree = document.getElementById("food")
@@ -187,6 +189,7 @@ function Desserts() {
     Dessert.innerHTML +=DessertsDivs[0]
     Dessert.innerHTML +=DessertsDivs[1]
     Dessert.innerHTML +=DessertsDivs[2]
+    Dessert.interHTML +=DessertsDivs[3]
     items = document.getElementsByClassName("item")
     items[0].style.background = DessertsImages[0]
     items[0].style.backgroundSize = '100% 100%'
@@ -194,6 +197,8 @@ function Desserts() {
     items[1].style.backgroundSize = '100% 100%'
     items[2].style.background = DessertsImages[2]
     items[2].style.backgroundSize = '100% 100%'
+    items[3].style.background = DessertsImages[3]
+    items[3].style.backgroundSize = '100% 100%'
 }	
 	
 </script>
