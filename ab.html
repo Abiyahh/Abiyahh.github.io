@@ -135,7 +135,7 @@
             <p>Join and get access to the latest tools, deals, events and tons more! Click the button to join our artistic family.
         </div>
         <div class="col-md-4 text-center">
-          <a href="#" class="btn btn-submit">Subscribe Now</a>
+          <a href="#" class="btn btn-submit" style="width: 200%">Subscribe Now</a>
         </div>
       </div>
     </div>
@@ -153,9 +153,11 @@
           </div>
         </div>
         <div class="col-md-9 col-sm-12">
+			<div class="row">
           <div class="col-md-4 col-sm-6 padding-right-zero">
             <div class="portfolio-box design">
-              <img src="http://hdlatestwallpaper.com/wp-content/uploads/2018/07/Glass-ball-chandelier-HD-wallpaper.jpg" style="width: 100%" alt="" class="img-responsive">
+              <img src="http://hdlatestwallpaper.com/wp-content/uploads/2018/07/Glass-ball-chandelier-HD-wallpaper.jpg" style="width: 100%" alt="" class="img-responsive" onclick=Photographer()>
+		  	<div class="item"> </div>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 padding-right-zero">
@@ -168,6 +170,8 @@
               <img src="https://fitsmallbusiness.com/wp-content/uploads/2018/03/Photographers-Insurance-Cost-Coverage-More.png" style="width: 107%" alt="" class="img-responsive">
             </div>
           </div>
+	  </div>
+	  <div class="row">
           <div class="col-md-4 col-sm-6 padding-right-zero">
             <div class="portfolio-box design">
               <img src="https://c1.staticflickr.com/6/5506/14234820180_de6069fb50_b.jpg" style="width: 100%">
@@ -183,6 +187,7 @@
               <img src="https://secure.i.telegraph.co.uk/multimedia/archive/03597/POTD_chick_3597497k.jpg" style="width: 100%" alt="" class="img-responsive">
             </div>
           </div>
+	  </div>
         </div>
       </div>
     </div>
@@ -288,6 +293,17 @@
   <script src="js/wow.js"></script>
   <script src="js/custom.js"></script>
   <script src="contactform/contactform.js"></script>
-
+  
+ 
+  <script>
+    items = document.getElementsByClassName("item")
+	function Photographer() {
+		if ( items[0].innerHTML == " ")
+		{items[0].innerHTML = "Kelly Willoe"}
+		else { items[0].innerHTML = " "}
+	}
+  </script>
+	<div class="item">
+	</div>
 </body>
 </html>
