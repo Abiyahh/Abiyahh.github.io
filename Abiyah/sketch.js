@@ -89,6 +89,9 @@ s = width/868
    if (dist( x,y, a,b) < 20 + 50) {
 	score = score + 1
 }
+	   
+if (touches.length == 0)   {
+
    if (keyIsDown(LEFT_ARROW)) {
     x = x - 5
   }
@@ -107,8 +110,8 @@ s = width/868
   }
   if ( b > height) {
 	b = 0
-    
   }
+}
   
   textSize(25)
   text("Score: " + score, 150, 200)  
