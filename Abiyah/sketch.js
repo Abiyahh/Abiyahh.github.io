@@ -105,16 +105,10 @@ if (touches.length == 0)   {
      if (keyIsDown(DOWN_ARROW)) {
     y = y + 5
   }
-  if ( a > width) {
-	a = 0
-  }
-  if ( b > height) {
-	b = 0
-  }
 }
   	else { 
-		a = touches[0].x
-		b = touches[0].y
+		x = touches[0].x
+		y = touches[0].y
 }
 
   textSize(25)
