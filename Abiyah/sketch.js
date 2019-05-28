@@ -111,6 +111,14 @@ if (touches.length == 0)   {
 		y = touches[0].y
 }
 
+  if ( a > width) {
+	a = 0
+  }
+  if ( b > height) {
+	b = 0
+    
+  }
+	   
   textSize(25)
   text("Score: " + score, 150, 200)  
   text("Time: " + time, 300,250)
