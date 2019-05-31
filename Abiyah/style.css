@@ -4,9 +4,6 @@ html, body {
   position: fixed; 
 	overflow: hidden; 
  overscroll-behavior: none;
-	position: fixed; 
-	 overflow: hidden; 
- overscroll-behavior: none;
 
 }
 canvas {
